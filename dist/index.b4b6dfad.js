@@ -31589,7 +31589,7 @@ function RegistrationView(props) {
                                                     columnNumber: 13
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
-                                                    className: "sign-up-button mt-2 mr-2",
+                                                    className: "regButton mt-2 mr-2",
                                                     variant: "primary",
                                                     type: "submit",
                                                     onClick: handleSubmit,
