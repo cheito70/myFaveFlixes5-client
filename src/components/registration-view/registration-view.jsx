@@ -14,7 +14,7 @@ export function RegistrationView(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(username, password, email, birthday);
-        props.onRegistration(username);
+        props.Registration(username);
     };
 
     return (
@@ -24,7 +24,8 @@ export function RegistrationView(props) {
           <Col>
             <CardGroup>
               <Card>
-                <Card.Header>Please Register</Card.Header>
+                <Card.Body>
+                   <Card.Header>Please Register</Card.Header>
                         <Form>
             <Form.Group>
             <Form.Label>Username:</Form.Label>
@@ -79,6 +80,7 @@ export function RegistrationView(props) {
             type="button" 
             onClick={() => {onBackClick(null); }}>Return to Login Page</Button>
             </Form>
+            </Card.Body>
           </Card>
         </CardGroup>
       </Col>
@@ -88,6 +90,4 @@ export function RegistrationView(props) {
     );
 }
 
-RegistrationView.propTypes = {
-    onRegistration: PropTypes.func.isRequired
-};
+RegistrationView.propTypes = {};
