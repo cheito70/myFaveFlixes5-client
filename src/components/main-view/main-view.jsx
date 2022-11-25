@@ -6,9 +6,8 @@ import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Navbar, Nav, Container, Row, Col} from 'react-bootstrap';
+
 
 import './main-view.scss';
 
@@ -75,6 +74,19 @@ toRegister(registered) {
         if(movies.length === 0) return <div className="main-view" />;
     
         return (
+            
+            <Navbar fixed="top" className="mainnav py-3 py-lg-4" bg="navColor" variant="dark" expand="md">
+                <Navbar.Brand href="/"><span className="brand-name">CinemaFlix</span></Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="ms-auto">
+                    <Nav.Link href="/">Movies</Nav.Link>
+                    <Nav.Link href="/users/:username">Profile</Nav.Link>
+                    <Nav.Link href="/" onClick={() => { this.onLoggedOut() }} >Logout</Nav.Link>
+                  </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+
             <Row className="main-view justify-content-md-center">
             {selectedMovie  
                 ? (
