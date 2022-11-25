@@ -20,7 +20,7 @@ export function RegistrationView(props) {
     return (
 
 
-    <Container fluid className="registrationContainer">
+    <Container fluid>
 
         <Navbar bg="navColor" variant="dark" expand="lg">
          <Container fluid>
@@ -30,7 +30,7 @@ export function RegistrationView(props) {
           </Nav>
          </Container>
         </Navbar>
-        
+
       <Row>
        <Col></Col>
           <Col>
