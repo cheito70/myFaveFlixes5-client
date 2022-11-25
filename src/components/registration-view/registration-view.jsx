@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import { Form, Button, Col, Row, CardGroup, Card, Container } from 'react-bootstrap';
+import { Navbar, Nav, Form, Button, Col, Row, CardGroup, Card, Container } from 'react-bootstrap';
 
 import './registration-view.scss';
 //import axios from 'axios';
@@ -18,7 +18,19 @@ export function RegistrationView(props) {
     };
 
     return (
-    <Container>
+
+
+    <Container fluid className="registrationContainer">
+
+        <Navbar bg="navColor" variant="dark" expand="lg">
+         <Container fluid>
+          <Navbar.Brand href="#home">My Fave Flixes</Navbar.Brand>
+          <Nav className="me-auto">
+           <Nav.Link href="#logout">Register</Nav.Link>
+          </Nav>
+         </Container>
+        </Navbar>
+        
       <Row>
        <Col></Col>
           <Col>
